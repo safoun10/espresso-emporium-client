@@ -16,7 +16,7 @@ const Banner = () => {
 						moment!!! Enjoy the beautiful moments and make them
 						memorable
 					</div>
-					<div className="btn bg-coffee text-rancho rounded-0 fs-5 w-50">
+					<div className="btn btn-learn-more bg-coffee text-rancho rounded-0 fs-4 w-50">
 						Learn More
 					</div>
 				</div>
