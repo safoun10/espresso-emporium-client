@@ -8,6 +8,7 @@ import AuthContainer from "./layout/authContainer/AuthContainer";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Body from "./layout/body/Body";
+import UpdateCoffee from "./layout/updateCoffee/UpdateCoffee";
 
 const router = createBrowserRouter([
 	{
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 	{
 		path: "/add-new-coffee",
 		element: <NewCoffee></NewCoffee>,
+	},
+	{
+		path: "/update-coffee",
+		element: <UpdateCoffee></UpdateCoffee>
 	},
 ]);
 

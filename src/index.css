@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 
 
 
 :root {
-  font-family: 'Raleway', sans-serif !important;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -12,15 +12,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  
-  --coffee-color : #331A15;
-  --coffee-bg : #E3B577;
-  --secondary-bg : #ECEAE3;
-  --border-radius-10 : 10px;
+
+  --coffee-color: #331A15;
+  --coffee-bg: #E3B577;
+  --secondary-bg: #ECEAE3;
+  --border-radius-10: 10px;
 }
 
 .text-rancho {
-  font-family: 'Rancho', cursive !important;
+  font-family: 'Rancho', sans-serif !important;
 }
 
 .text-coffee {
@@ -44,6 +44,7 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -53,4 +54,5 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Raleway', sans-serif !important;
 }
