@@ -20,3 +20,12 @@
     background-color: transparent;
     color: var(--coffee-color);
 }
+
+.bg-single-product {
+    background-color: #F5F4F1;
+}
+
+.border-cool{
+    border: 10px solid white;
+    border-radius: 10px;
+}

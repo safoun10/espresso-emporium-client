@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Products.css";
 import { Link } from "react-router-dom";
-import { BsCup, BsCupFill, BsCupHot, BsCupHotFill } from "react-icons/bs";
+import {BsCupFill} from "react-icons/bs";
+import SingleProduct from "../singleProduct/SingleProduct";
 
 const Products = ({ coffees }) => {
 	console.log(coffees);
@@ -29,6 +30,14 @@ const Products = ({ coffees }) => {
 						<BsCupFill></BsCupFill>
 					</div>
 				</Link>
+			</div>
+			<div className="row" style={{ maxWidth: "1200px", margin: "auto" }}>
+				{coffees.map((coffee) => (
+					<SingleProduct
+						key={coffee._id}
+						coffee={coffee}
+					></SingleProduct>
+				))}
 			</div>
 		</div>
 	);
