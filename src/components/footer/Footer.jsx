@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            
+        <div className='text-center d-none'>
+            footer
         </div>
     );
 };

@@ -8,6 +8,7 @@ const TopHeader = () => {
 				<img
 					src="https://i.ibb.co/6RpqF4P/logo.png"
 					className="logo-img"
+					alt='logo'
 				/>
 			</div>
 			<div className="display-4 text-rancho text-white">

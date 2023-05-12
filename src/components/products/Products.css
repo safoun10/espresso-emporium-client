@@ -1,0 +1,22 @@
+.text-shadow {
+    text-shadow: 0 0 12px rgb(67, 67, 67);
+}
+
+.product-bg {
+    background-image: url("https://i.postimg.cc/4xxfdvmH/body-Complete-Bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.add-new-coffee {
+    border: 3px solid var(--coffee-color);
+    background-color: var(--coffee-bg);
+    padding: 5px 30px;
+}
+
+.add-new-coffee:hover {
+    border: 3px solid var(--coffee-color);
+    background-color: transparent;
+    color: var(--coffee-color);
+}

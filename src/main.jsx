@@ -17,21 +17,22 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: <Navigate to={"/home"}></Navigate>
+				element: <Navigate to={"/home"}></Navigate>,
 			},
 			{
 				path: "/login",
-				element: <Login></Login>
+				element: <Login></Login>,
 			},
 			{
 				path: "/register",
-				element: <Register></Register>
-			}
-		]
+				element: <Register></Register>,
+			},
+		],
 	},
 	{
 		path: "/home",
-		element: <Body></Body>
+		element: <Body></Body>,
+		loader: () => fetch("http://localhost:5000/coffee")
 	},
 	{
 		path: "/add-new-coffee",
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/update-coffee",
-		element: <UpdateCoffee></UpdateCoffee>
+		element: <UpdateCoffee></UpdateCoffee>,
 	},
 ]);
 
