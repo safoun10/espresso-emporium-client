@@ -16,8 +16,9 @@
 .input-coffee-data {
     width: 100%;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     color: #1B1A1A99;
+    border-bottom: 2px solid #F4F3F0;
 }
 
 .input-coffee-data:focus {
@@ -28,4 +29,37 @@
 .text-titles {
     color: #1B1A1ACC;
     margin-bottom: 10px;
+}
+
+.btn-add {
+    background-color: var(--coffee-bg);
+    border: 3px solid var(--coffee-color);
+    transition: .5s;
+}
+
+.btn-add:hover {
+    background-color: transparent;
+    border: 3px solid var(--coffee-color);
+}
+
+.w-home {
+    width: 25%;
+}
+
+.w-secondary {
+    width: 75%;
+}
+
+@media only screen and (max-width: 500px) {
+    .w-home {
+        width: 50%;
+    }
+
+    .w-secondary {
+        width: 100%;
+    }
+
+    .form-bg {
+        padding: 30px 40px;
+    }
 }
