@@ -1,0 +1,31 @@
+.text-glow {
+    text-shadow: 0px 0px 12px rgb(0, 0, 0);
+    transition: .5s;
+}
+
+.text-glow:hover {
+    text-shadow: none;
+    background-color: var(--coffee-bg);
+}
+
+.form-bg {
+    background-color: #F4F3F0;
+    padding: 70px 100px;
+}
+
+.input-coffee-data {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: #1B1A1A99;
+}
+
+.input-coffee-data:focus {
+    outline: none;
+    border-bottom: 2px solid gray;
+}
+
+.text-titles {
+    color: #1B1A1ACC;
+    margin-bottom: 10px;
+}
