@@ -1,9 +1,49 @@
 import React from "react";
 import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import "./AddCoffee.css"
+import "./AddCoffee.css";
+import Swal from "sweetalert2";
 
 const AddCoffee = () => {
+
+    const handleNewCoffee = event => {
+        event.preventDefault();
+
+        const form = event.target ;
+
+        const name = form.name.value;
+        const chef = form.chef.value;
+        const supplier = form.supplier.value;
+        const taste = form.taste.value;
+        const category = form.category.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+
+        const newCoffee = { name, chef, supplier, taste, category, details , photo};
+
+        console.log(newCoffee);
+
+        fetch("http://localhost:5000/coffee" , {
+            method : "POST",
+            headers : {
+                "content-type" : "application/json"
+            },
+            body : JSON.stringify(newCoffee)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+					title: "Success !!!",
+					text: "Successfully added coffee data to database",
+					icon: "success",
+					confirmButtonText: "Cool",
+				});
+            }
+        })
+    }
+
 	return (
 		<div
 			className="py-5"
@@ -34,7 +74,7 @@ const AddCoffee = () => {
 					</div>
 				</div>
 				<div>
-					<form className="row">
+					<form className="row" onSubmit={handleNewCoffee}>
 						<div className="col-md-6 col-12 mb-4">
 							<div className="fw-bold text-titles">Name</div>
 							<input
@@ -106,7 +146,7 @@ const AddCoffee = () => {
 							/>
 						</div>
                         <div>
-                            <div className="btn btn-add text-rancho fs-4 text-coffee w-100">Add Coffee</div>
+                            <input name="submit" type="submit" className="btn btn-add text-rancho fs-4 text-coffee w-100" value={"Add Coffee"}></input>
                         </div>
 					</form>
 				</div>
