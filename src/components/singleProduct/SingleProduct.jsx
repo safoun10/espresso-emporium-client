@@ -72,7 +72,10 @@ const SingleProduct = ({coffee}) => {
 				</div>
 			</div>
 			<div className="ms-5 gap-3 d-flex flex-column">
-				<Link className="text-decoration-none text-coffee">
+				<Link
+					to={`/update-coffee/${_id}`}
+					className="text-decoration-none text-coffee"
+				>
 					<div className="eye fs-5">
 						<BsEyeFill></BsEyeFill>
 					</div>
@@ -83,7 +86,10 @@ const SingleProduct = ({coffee}) => {
 					</div>
 				</Link>
 				<Link className="text-decoration-none text-coffee">
-					<div onClick={() => handleDelete(_id)} className="trash fs-5">
+					<div
+						onClick={() => handleDelete(_id)}
+						className="trash fs-5"
+					>
 						<FaTrash></FaTrash>
 					</div>
 				</Link>

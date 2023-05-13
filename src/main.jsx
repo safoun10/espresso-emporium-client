@@ -2,7 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {
+	createBrowserRouter,
+	Navigate,
+	RouterProvider,
+} from "react-router-dom";
 import NewCoffee from "./layout/newCoffee/NewCoffee";
 import AuthContainer from "./layout/authContainer/AuthContainer";
 import Login from "./components/login/Login";
@@ -32,15 +36,17 @@ const router = createBrowserRouter([
 	{
 		path: "/home",
 		element: <Body></Body>,
-		loader: () => fetch("http://localhost:5000/coffee")
+		loader: () => fetch("http://localhost:5000/coffee"),
 	},
 	{
 		path: "/add-new-coffee",
 		element: <NewCoffee></NewCoffee>,
 	},
 	{
-		path: "/update-coffee",
+		path: "/update-coffee/:ID",
 		element: <UpdateCoffee></UpdateCoffee>,
+		loader: ({ params }) =>
+			fetch(`http://localhost:5000/coffee/${params.ID}`)
 	},
 ]);
 

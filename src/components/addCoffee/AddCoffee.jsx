@@ -1,10 +1,11 @@
 import React from "react";
 import { BsArrowLeft } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./AddCoffee.css";
 import Swal from "sweetalert2";
 
 const AddCoffee = () => {
+	const navigate = useNavigate();
 
     const handleNewCoffee = event => {
         event.preventDefault();
@@ -39,7 +40,15 @@ const AddCoffee = () => {
 					title: "Success !!!",
 					text: "Successfully added coffee data to database",
 					icon: "success",
-					confirmButtonText: "Cool",
+					showDenyButton: true,
+					denyButtonText: "Add More",
+					confirmButtonText: "Go to Homepage",
+				}).then((result) => {
+					if (result.isConfirmed) {
+						navigate("/home");
+					} else if (result.isDenied) {
+						Swal.fire("Cool" , "Thanks for contributing" , "success");
+					}
 				});
             }
         })
