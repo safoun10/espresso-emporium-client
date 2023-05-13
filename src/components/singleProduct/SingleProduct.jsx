@@ -5,7 +5,7 @@ import "./SingleProduct.css"
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const SingleProduct = ({coffee}) => {
+const SingleProduct = ({coffee , coffees , setCoffees}) => {
 
     const {name , photo , chef , taste , _id , supplier} = coffee;
 
@@ -29,6 +29,8 @@ const SingleProduct = ({coffee}) => {
                     if(data.deletedCount > 0){
                         Swal.fire("Deleted!", "Your coffee has been deleted from database.", "success");
                     }
+					const remaining = coffees.filter(c => c._id !== id);
+					setCoffees(remaining);
                 })
 			}
 		});

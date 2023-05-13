@@ -7,14 +7,19 @@ import Products from "../../components/products/Products";
 import { useLoaderData } from "react-router-dom";
 
 const Body = () => {
-    const coffeeData = useLoaderData();
+	const coffeeData = useLoaderData();
+	const [coffees, setCoffees] = useState(coffeeData);
 
 	return (
 		<div>
 			<TopHeader></TopHeader>
 			<Banner></Banner>
 			<Features></Features>
-			<Products coffees={coffeeData}></Products>
+			<Products
+				coffeeData={coffees}
+				coffees={coffees}
+				setCoffees={setCoffees}
+			></Products>
 			<Footer></Footer>
 		</div>
 	);

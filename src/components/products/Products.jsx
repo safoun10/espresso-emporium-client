@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {BsCupFill} from "react-icons/bs";
 import SingleProduct from "../singleProduct/SingleProduct";
 
-const Products = ({ coffees }) => {
+const Products = ({ coffeeData , coffees , setCoffees }) => {
 
 	return (
 		<div className="product-bg">
@@ -33,10 +33,12 @@ const Products = ({ coffees }) => {
 				</div>
 			</div>
 			<div className="row" style={{ maxWidth: "1200px", margin: "auto" }}>
-				{coffees.map((coffee) => (
+				{coffeeData.map((coffee) => (
 					<SingleProduct
 						key={coffee._id}
 						coffee={coffee}
+						coffees = {coffees}
+						setCoffees={setCoffees}
 					></SingleProduct>
 				))}
 			</div>
