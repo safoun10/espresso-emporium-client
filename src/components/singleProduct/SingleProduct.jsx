@@ -46,41 +46,41 @@ const SingleProduct = ({coffee}) => {
 				</div>
 				<div className="d-flex flex-column align-items-start justify-content-center gap-1">
 					<div>
-						<span className="text-coffee fw-bold me-2">
-							Name :{" "}
+						<span className="text-coffee fw-bold">
+							Name <br />
 						</span>
 						<span className="text-secondary w-100">{name}</span>
 					</div>
 					<div>
-						<span className="text-coffee fw-bold me-2">
-							Chef :{" "}
+						<span className="text-coffee fw-bold">
+							Chef <br />
 						</span>
 						<span className="text-secondary">{chef}</span>
 					</div>
 					<div>
-						<span className="text-coffee fw-bold me-2">
-							Taste :{" "}
+						<span className="text-coffee fw-bold">
+							Taste <br />
 						</span>
 						<span className="text-secondary">{taste}</span>
 					</div>
 					<div>
-						<span className="text-coffee fw-bold me-2">
-							Supplier :{" "}
+						<span className="text-coffee fw-bold">
+							Supplier <br />
 						</span>
 						<span className="text-secondary">{supplier}</span>
 					</div>
 				</div>
 			</div>
-			<div className="ms-5 gap-3 d-flex flex-column">
-				<Link
-					to={`/update-coffee/${_id}`}
-					className="text-decoration-none text-coffee"
-				>
+			<div className="ms-1 gap-3 d-flex flex-column">
+				<Link className="text-decoration-none text-coffee">
 					<div className="eye fs-5">
 						<BsEyeFill></BsEyeFill>
 					</div>
 				</Link>
-				<Link className="text-decoration-none text-coffee">
+				<Link
+					to={`/update-coffee/${_id}`}
+					className="text-decoration-none text-coffee"
+				>
 					<div className="pencil fs-5">
 						<BsPencilSquare></BsPencilSquare>
 					</div>
