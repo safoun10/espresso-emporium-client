@@ -6,13 +6,18 @@
     background-image: url("https://i.postimg.cc/4xxfdvmH/body-Complete-Bg.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    width: 100vw !important;
 }
 
 .add-new-coffee {
     border: 3px solid var(--coffee-color);
     background-color: var(--coffee-bg);
     padding: 5px 30px;
+}
+
+.add-new-coffee:focus {
+    color: var(--coffee-color) !important;
 }
 
 .add-new-coffee:hover {
@@ -25,7 +30,7 @@
     background-color: #F5F4F1;
 }
 
-.border-cool{
+.border-cool {
     border: 10px solid white;
     border-radius: 10px;
 }
