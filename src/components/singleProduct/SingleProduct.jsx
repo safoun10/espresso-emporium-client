@@ -99,12 +99,3 @@ const SingleProduct = ({coffee}) => {
 };
 
 export default SingleProduct;
-
-// category: "Black coffee";
-// chef: "safoun ";
-// details: "What are you suppose to do then ?";
-// name: "MD Sultan Mahmud Safoun";
-// photo: "https://i.postimg.cc/hPNPMGKy/product-One.png";
-// supplier: "Toilet corner";
-// taste: "Bitter";
-// _id: "645e5b52c1083a3f99fb8126";

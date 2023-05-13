@@ -122,7 +122,7 @@ const AddCoffee = () => {
 								type="text"
                                 name="taste"
 								required
-								placeholder="Enter Coffee Details"
+								placeholder="Enter Coffee Taste"
 							/>
 						</div>
 						<div className="col-md-6 col-12 mb-4">
