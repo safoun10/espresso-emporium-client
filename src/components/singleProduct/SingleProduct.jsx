@@ -47,25 +47,25 @@ const SingleProduct = ({coffee , coffees , setCoffees}) => {
 					/>
 				</div>
 				<div className="d-flex flex-column align-items-start justify-content-center gap-1">
-					<div>
+					<div className="w-75">
 						<span className="text-coffee fw-bold">
 							Name <br />
 						</span>
 						<span className="text-secondary w-100">{name}</span>
 					</div>
-					<div>
+					<div className="w-75">
 						<span className="text-coffee fw-bold">
 							Chef <br />
 						</span>
 						<span className="text-secondary">{chef}</span>
 					</div>
-					<div>
+					<div className="w-75">
 						<span className="text-coffee fw-bold">
 							Taste <br />
 						</span>
 						<span className="text-secondary">{taste}</span>
 					</div>
-					<div>
+					<div className="w-75">
 						<span className="text-coffee fw-bold">
 							Supplier <br />
 						</span>
