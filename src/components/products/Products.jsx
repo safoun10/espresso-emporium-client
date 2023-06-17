@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import "./Products.css";
 import { Link } from "react-router-dom";
-import {BsCupFill} from "react-icons/bs";
+import { BsCupFill } from "react-icons/bs";
 import SingleProduct from "../singleProduct/SingleProduct";
 
-const Products = ({ coffeeData , coffees , setCoffees }) => {
-
+const Products = ({ coffeeData, coffees, setCoffees }) => {
 	return (
 		<div className="product-bg">
-			<div
-				style={{ maxWidth: "1200px", margin: "auto" }}
-				className="py-5"
-			>
+			<div className="py-5">
 				<div className="text-rancho text-center fs-4 my-3">
 					-- Sip & Savour --
 				</div>
@@ -37,7 +33,7 @@ const Products = ({ coffeeData , coffees , setCoffees }) => {
 					<SingleProduct
 						key={coffee._id}
 						coffee={coffee}
-						coffees = {coffees}
+						coffees={coffees}
 						setCoffees={setCoffees}
 					></SingleProduct>
 				))}
