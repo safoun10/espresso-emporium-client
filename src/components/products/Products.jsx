@@ -6,12 +6,12 @@ import SingleProduct from "../singleProduct/SingleProduct";
 
 const Products = ({ coffeeData, coffees, setCoffees }) => {
 	return (
-		<div className="product-bg">
+		<div className="product-bg mb-5">
 			<div className="py-5">
 				<div className="text-rancho text-center fs-4 my-3">
 					-- Sip & Savour --
 				</div>
-				<div className="display-3 text-rancho text-coffee text-shadow text-center">
+				<div className="display-3 text-rancho text-coffee text-shadow text-center pb-5">
 					Our Popular Products
 				</div>
 				<div className="d-flex justify-content-center align-items-center">
