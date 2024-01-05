@@ -55,7 +55,7 @@ const SingleProduct = ({coffee , coffees , setCoffees}) => {
 					</div>
 					<div className="w-75">
 						<span className="text-coffee fw-bold">
-							Chef <br />
+							Barista <br />
 						</span>
 						<span className="text-secondary">{chef}</span>
 					</div>
