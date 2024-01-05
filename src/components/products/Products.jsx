@@ -6,7 +6,7 @@ import SingleProduct from "../singleProduct/SingleProduct";
 
 const Products = ({ coffeeData, coffees, setCoffees }) => {
 	return (
-		<div className="product-bg">
+		<div className="product-bg mb-5">
 			<div className="py-5">
 				<div className="text-rancho text-center fs-4 my-3">
 					-- Sip & Savour --
