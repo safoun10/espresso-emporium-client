@@ -37,7 +37,7 @@ const SingleProduct = ({coffee , coffees , setCoffees}) => {
     }
 
     return (
-		<div className="d-flex p-4 align-items-center justify-content-between border-cool col-11 col-lg-6 mx-auto bg-single-product">
+		<div className="d-flex p-4 align-items-center justify-content-between border-cool col-11 col-lg-6 mx-auto bg-single-product rounded-4">
 			<div className="d-flex align-items-center">
 				<div>
 					<img

@@ -5,7 +5,7 @@ const Features = () => {
     return (
 		<div className="feature-bg">
 			<div
-				className="col-11 col-md-12 mx-auto row"
+				className="col-11 col-md-12 mx-auto row py-4"
 				style={{ maxWidth: "1200px", margin: "auto" }}
 			>
 				<div className="col-11 mx-auto col-md-3 py-5 d-flex flex-column justify-content-center align-items-center">
