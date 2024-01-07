@@ -58,14 +58,13 @@ const UpdateCoffee = () => {
 							navigate("/home");
 						}
 					});
-				}
-				else{
+				} else {
 					Swal.fire({
 						title: "You didn't updated anything !",
 						text: "Please updated coffee data to database",
 						icon: "warning",
-						showDenyButton : true,
-						denyButtonText : "Edit this coffee details again",
+						showDenyButton: true,
+						denyButtonText: "Edit this coffee details again",
 						confirmButtonText: "Go to Homepage",
 					}).then((result) => {
 						if (result.isConfirmed) {
