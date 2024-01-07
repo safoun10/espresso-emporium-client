@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import "./Feature.css";
 
 const Features = () => {
-    return (
+	return (
 		<div className="feature-bg">
 			<div
 				className="col-11 col-md-12 mx-auto row py-4"

@@ -1,48 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 
 :root {
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	line-height: 1.5;
+	font-weight: 400;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 
-  --coffee-color: #331A15;
-  --coffee-bg: #E3B577;
-  --secondary-bg: #ECEAE3;
-  --border-radius-10: 10px;
+	--coffee-color: #331a15;
+	--coffee-bg: #e3b577;
+	--secondary-bg: #eceae3;
+	--border-radius-10: 10px;
 }
 
 .text-rancho {
-  font-family: 'Rancho', sans-serif !important;
+	font-family: "Rancho", sans-serif !important;
 }
 
 .text-coffee {
-  color: var(--coffee-color) !important;
+	color: var(--coffee-color) !important;
 }
 
 .bg-coffee {
-  background-color: #E3B577 !important;
+	background-color: #e3b577 !important;
 }
 
 .bg-secondary-grey {
-  background-color: var(--secondary-bg) !important;
+	background-color: var(--secondary-bg) !important;
 }
 
 .br-10 {
-  border-radius: var(--border-radius-10);
+	border-radius: var(--border-radius-10);
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  font-family: 'Raleway', sans-serif !important;
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	font-family: "Raleway", sans-serif !important;
 }

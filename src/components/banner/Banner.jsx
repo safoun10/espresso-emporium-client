@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 import "./Banner.css";
 import LazyLoad from "react-lazy-load";
 
-
 const Banner = () => {
-    return (
+	return (
 		<LazyLoad>
 			<div className="banner-img text-white d-flex justify-content-center align-items-center">
 				<div
