@@ -1,16 +1,15 @@
-import React from 'react';
-import { BsEyeFill, BsPencilSquare } from 'react-icons/bs';
+import React from "react";
+import { BsEyeFill, BsPencilSquare } from "react-icons/bs";
 import { FaTrash } from "react-icons/fa";
-import "./SingleProduct.css"
-import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import "./SingleProduct.css";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const SingleProduct = ({coffee , coffees , setCoffees}) => {
+const SingleProduct = ({ coffee, coffees, setCoffees }) => {
+	const { name, photo, chef, taste, _id, supplier } = coffee;
 
-    const {name , photo , chef , taste , _id , supplier} = coffee;
-
-    const handleDelete = id => {
-        Swal.fire({
+	const handleDelete = (id) => {
+		Swal.fire({
 			title: `Are you sure , you want to delete ${name} `,
 			text: "You won't be able to revert this!",
 			icon: "warning",
@@ -20,23 +19,27 @@ const SingleProduct = ({coffee , coffees , setCoffees}) => {
 			confirmButtonText: "Yes, delete it!",
 		}).then((result) => {
 			if (result.isConfirmed) {
-                fetch(`http://localhost:5000/coffee/${id}` , {
-                    method : "DELETE"
-                })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if(data.deletedCount > 0){
-                        Swal.fire("Deleted!", "Your coffee has been deleted from database.", "success");
-                    }
-					const remaining = coffees.filter(c => c._id !== id);
-					setCoffees(remaining);
-                })
+				fetch(`http://localhost:5000/coffee/${id}`, {
+					method: "DELETE",
+				})
+					.then((res) => res.json())
+					.then((data) => {
+						console.log(data);
+						if (data.deletedCount > 0) {
+							Swal.fire(
+								"Deleted!",
+								"Your coffee has been deleted from database.",
+								"success"
+							);
+						}
+						const remaining = coffees.filter((c) => c._id !== id);
+						setCoffees(remaining);
+					});
 			}
 		});
-    }
+	};
 
-    return (
+	return (
 		<div className="d-flex p-4 align-items-center justify-content-between border-cool col-11 col-lg-6 mx-auto bg-single-product rounded-4">
 			<div className="d-flex align-items-center">
 				<div>

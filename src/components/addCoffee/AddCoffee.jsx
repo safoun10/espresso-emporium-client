@@ -7,58 +7,67 @@ import Swal from "sweetalert2";
 const AddCoffee = () => {
 	const navigate = useNavigate();
 
-    const handleNewCoffee = event => {
-        event.preventDefault();
+	const handleNewCoffee = (event) => {
+		event.preventDefault();
 
-        const form = event.target ;
+		const form = event.target;
 
-        const name = form.name.value;
-        const chef = form.chef.value;
-        const supplier = form.supplier.value;
-        const taste = form.taste.value;
-        const category = form.category.value;
-        const details = form.details.value;
-        const photo = form.photo.value;
+		const name = form.name.value;
+		const chef = form.chef.value;
+		const supplier = form.supplier.value;
+		const taste = form.taste.value;
+		const category = form.category.value;
+		const details = form.details.value;
+		const photo = form.photo.value;
 
-        const newCoffee = { name, chef, supplier, taste, category, details , photo};
+		const newCoffee = {
+			name,
+			chef,
+			supplier,
+			taste,
+			category,
+			details,
+			photo,
+		};
 
-        console.log(newCoffee);
+		console.log(newCoffee);
 
-        fetch("http://localhost:5000/coffee" , {
-            method : "POST",
-            headers : {
-                "content-type" : "application/json"
-            },
-            body : JSON.stringify(newCoffee)
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            form.reset();
-            if(data.insertedId){
-                Swal.fire({
-					title: "Success !!!",
-					text: "Successfully added coffee data to database",
-					icon: "success",
-					showDenyButton: true,
-					denyButtonText: "Add More",
-					confirmButtonText: "Go to Homepage",
-				}).then((result) => {
-					if (result.isConfirmed) {
-						navigate("/home");
-					} else if (result.isDenied) {
-						Swal.fire("Cool" , "Thanks for contributing" , "success");
-					}
-				});
-            }
-        })
-    }
+		fetch("http://localhost:5000/coffee", {
+			method: "POST",
+			headers: {
+				"content-type": "application/json",
+			},
+			body: JSON.stringify(newCoffee),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				form.reset();
+				if (data.insertedId) {
+					Swal.fire({
+						title: "Success !!!",
+						text: "Successfully added coffee data to database",
+						icon: "success",
+						showDenyButton: true,
+						denyButtonText: "Add More",
+						confirmButtonText: "Go to Homepage",
+					}).then((result) => {
+						if (result.isConfirmed) {
+							navigate("/home");
+						} else if (result.isDenied) {
+							Swal.fire(
+								"Cool",
+								"Thanks for contributing",
+								"success"
+							);
+						}
+					});
+				}
+			});
+	};
 
 	return (
-		<div
-			className="py-5"
-			style={{ maxWidth: "1200px", margin: "auto" }}
-		>
+		<div className="py-5" style={{ maxWidth: "1200px", margin: "auto" }}>
 			<div>
 				<Link
 					className="text-glow w-home d-flex justify-content-center py-2 mb-4 align-items-center text-decoration-none text-coffee text-rancho fs-2"
@@ -90,7 +99,7 @@ const AddCoffee = () => {
 							<input
 								className="input-coffee-data"
 								type="text"
-                                name="name"
+								name="name"
 								required
 								placeholder="Enter Coffee Name"
 							/>
@@ -100,7 +109,7 @@ const AddCoffee = () => {
 							<input
 								className="input-coffee-data"
 								type="text"
-                                name="chef"
+								name="chef"
 								required
 								placeholder="Enter Chef Name"
 							/>
@@ -110,7 +119,7 @@ const AddCoffee = () => {
 							<input
 								className="input-coffee-data"
 								type="text"
-                                name="supplier"
+								name="supplier"
 								required
 								placeholder="Enter Coffee Supplier"
 							/>
@@ -120,7 +129,7 @@ const AddCoffee = () => {
 							<input
 								className="input-coffee-data"
 								type="text"
-                                name="taste"
+								name="taste"
 								required
 								placeholder="Enter Coffee Taste"
 							/>
@@ -130,7 +139,7 @@ const AddCoffee = () => {
 							<input
 								className="input-coffee-data"
 								type="text"
-                                name="category"
+								name="category"
 								required
 								placeholder="Enter Coffee Category"
 							/>
@@ -140,7 +149,7 @@ const AddCoffee = () => {
 							<input
 								className="input-coffee-data"
 								type="text"
-                                name="details"
+								name="details"
 								required
 								placeholder="Enter Coffee Details"
 							/>
@@ -150,14 +159,19 @@ const AddCoffee = () => {
 							<input
 								className="input-coffee-data"
 								type="url"
-                                name="photo"
+								name="photo"
 								required
 								placeholder="Enter Coffee URL"
 							/>
 						</div>
-                        <div>
-                            <input name="submit" type="submit" className="btn btn-add text-rancho fs-4 text-coffee w-100" value={"Add Coffee"}></input>
-                        </div>
+						<div>
+							<input
+								name="submit"
+								type="submit"
+								className="btn btn-add text-rancho fs-4 text-coffee w-100"
+								value={"Add Coffee"}
+							></input>
+						</div>
 					</form>
 				</div>
 			</div>

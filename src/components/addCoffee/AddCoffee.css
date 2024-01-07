@@ -1,65 +1,65 @@
 .text-glow {
-    text-shadow: 0px 0px 12px rgb(0, 0, 0);
-    transition: .5s;
+	text-shadow: 0px 0px 12px rgb(0, 0, 0);
+	transition: 0.5s;
 }
 
 .text-glow:hover {
-    text-shadow: none;
-    background-color: var(--coffee-bg);
+	text-shadow: none;
+	background-color: var(--coffee-bg);
 }
 
 .form-bg {
-    background-color: #F4F3F0;
-    padding: 70px 100px;
+	background-color: #f4f3f0;
+	padding: 70px 100px;
 }
 
 .input-coffee-data {
-    width: 100%;
-    border: none;
-    padding: 10px 20px;
-    color: #1B1A1A99;
-    border-bottom: 2px solid #F4F3F0;
+	width: 100%;
+	border: none;
+	padding: 10px 20px;
+	color: #1b1a1a99;
+	border-bottom: 2px solid #f4f3f0;
 }
 
 .input-coffee-data:focus {
-    outline: none;
-    border-bottom: 2px solid gray;
+	outline: none;
+	border-bottom: 2px solid gray;
 }
 
 .text-titles {
-    color: #1B1A1ACC;
-    margin-bottom: 10px;
+	color: #1b1a1acc;
+	margin-bottom: 10px;
 }
 
 .btn-add {
-    background-color: var(--coffee-bg);
-    border: 3px solid var(--coffee-color);
-    transition: .5s;
+	background-color: var(--coffee-bg);
+	border: 3px solid var(--coffee-color);
+	transition: 0.5s;
 }
 
 .btn-add:hover {
-    background-color: transparent;
-    border: 3px solid var(--coffee-color);
+	background-color: transparent;
+	border: 3px solid var(--coffee-color);
 }
 
 .w-home {
-    width: 25%;
+	width: 25%;
 }
 
 .w-secondary {
-    width: 75%;
+	width: 75%;
 }
 
 @media only screen and (max-width: 500px) {
-    .w-home {
-        width: 50%;
-    }
+	.w-home {
+		width: 50%;
+	}
 
-    .w-secondary {
-        width: 100%;
-    }
+	.w-secondary {
+		width: 100%;
+	}
 
-    .form-bg {
-        padding: 30px 40px;
-    }
+	.form-bg {
+		padding: 30px 40px;
+	}
 }

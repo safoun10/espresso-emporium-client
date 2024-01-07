@@ -1,38 +1,38 @@
 .text-shadow {
-    text-shadow: 0 0 12px rgb(67, 67, 67);
+	text-shadow: 0 0 12px rgb(67, 67, 67);
 }
 
 .product-bg {
-    background-image: url("https://i.postimg.cc/4xxfdvmH/body-Complete-Bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100% !important;
+	background-image: url("https://i.postimg.cc/4xxfdvmH/body-Complete-Bg.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100% !important;
 }
 
 .add-new-coffee {
-    border: 3px solid var(--coffee-color);
-    background-color: var(--coffee-bg);
-    padding: 5px 30px;
-    transition: .5s;
+	border: 3px solid var(--coffee-color);
+	background-color: var(--coffee-bg);
+	padding: 5px 30px;
+	transition: 0.5s;
 }
 
 .add-new-coffee:focus {
-    color: var(--coffee-color) !important;
+	color: var(--coffee-color) !important;
 }
 
 .add-new-coffee:hover {
-    border: 3px solid var(--coffee-color);
-    background-color: transparent;
-    color: var(--coffee-color);
-    border-radius: 0;
+	border: 3px solid var(--coffee-color);
+	background-color: transparent;
+	color: var(--coffee-color);
+	border-radius: 0;
 }
 
 .bg-single-product {
-    background-color: #F5F4F1;
+	background-color: #f5f4f1;
 }
 
 .border-cool {
-    border: 10px solid white;
-    border-radius: 10px;
+	border: 10px solid white;
+	border-radius: 10px;
 }
